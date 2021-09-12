@@ -160,6 +160,8 @@ blockquote {
   background-repeat: no-repeat;
   background-position: center -210px;
   opacity: 0.3;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {

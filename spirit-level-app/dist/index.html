@@ -22,7 +22,23 @@
 -->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700" rel="stylesheet">
 
-<div class="container">
+<div class="not-running-ui">
+    <img class="image" src="./spirit-level-2.svg"/>
+    <p class="title">Su Terazisi</p>
+    <span class="desc"
+      >Su Terazisini Ölçüm Yapmak İstediğiniz Alana Yerleştirin.</span
+    >
+    <button
+      class="button"
+      color="primary"
+      type="button"
+      onclick="startSpiritLevel()"
+    >
+      BAŞLAT
+    </button>
+  </div>
+
+<div class="container not-show">
 	<div class="grid-item">
 		<div class="vmarkerl">-45°</div>
 	</div>
@@ -116,7 +132,7 @@
 				</div>
 		</div>
 	</div>
-
+<!-- 
 	<div class="calbutt" onclick="calibrate()">
 		<div class="buttTxt" id="calTxt">Zero</div>
 		<div class="cal1">
@@ -132,21 +148,21 @@
 		<div class="res2"></div>
 		<div class="res3"></div>
 		<div class="res4"></div>
-	</div>
-
+	</div> -->
+<!-- 
 	<div class="infbutt" onclick="infDisp()">
 		<div class="buttTxt" id="infTxt">Bilgi</div>
 		<div class="iicon">
 			<svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" height="36" width="36"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="burger" onclick="switchMenu()">
+	<!-- <div class="burger" onclick="switchMenu()">
 		<div class="buttTxt" id="menuTxt">Menu</div>
 		<div class="b1"></div>
 		<div class="b2"></div>
 		<div class="b3"></div>
-	</div>
+	</div> -->
 </div>
 
 <div class="indicator">

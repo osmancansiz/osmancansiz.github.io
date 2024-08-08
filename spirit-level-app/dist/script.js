@@ -463,29 +463,33 @@ async function switchMenu() {
   }
 }
 
-switchMenu();
-burger.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.7)";
-calbutt.style.transform = "translate(-50%, 0%) rotate(0deg)";
-resbutt.style.transform = "translate(-50%, 0%) rotate(0deg)";
-infbutt.style.transform = "translate(-50%, 0%) rotate(0deg)";
+async function startSpiritLevel() {
+  if (DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === "function") {
+    const permissionState = await DeviceOrientationEvent.requestPermission();
+    if (permissionState === "granted") {
+      // do nothing special if granted
+    } else {
+      let warnTXT = document.querySelector(".cltxt");
+      warnTXT.innerHTML = "You have denied permission, so this app wont work. 😢<br><br>To give permission force-close your browser and try again.";
+      supWarn.style.display = "inline";
+    }
+  }
 
-burger.style.top = "0 0 10px rgba(0, 0, 0, 0.7)";
-calbutt.style.top = "translate(-50%, 0%) rotate(180deg)";
-infbutt.style.top = "translate(-50%, 0%) rotate(-180deg)";
+  //hide and show elements
+  //add .not-show and remove  .not-show class from elements
+  // .container and .not-running-ui
 
-menu.style.top = "calc(100% - 102px)";
-menu.style.height = "80px";
-menu.style.width = "80px";
-txtBlock.style.display = "none";
-datBlock.style.display = "none";
-inf.style.display = "none";
-infExp = false;
-menuTxt.style.opacity = "0";
-calTxt.style.opacity = "0";
-infTxt.style.opacity = "0";
-resTxt.style.opacity = "0";
-menuExp = false;
-UpdateDataView();
+  let notShow = document.querySelectorAll(".not-show");
+  let notRun = document.querySelectorAll(".not-running-ui");
+  notShow.forEach((element) => {
+    element.classList.remove("not-show");
+  });
+  notRun.forEach((element) => {
+    element.classList.add("not-show");
+  });
+
+  UpdateDataView();
+}
 
 //Vibra Setting
 function VibraSwitch() {

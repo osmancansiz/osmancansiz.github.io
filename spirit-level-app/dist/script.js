@@ -485,6 +485,7 @@ calTxt.style.opacity = "0";
 infTxt.style.opacity = "0";
 resTxt.style.opacity = "0";
 menuExp = false;
+UpdateDataView();
 
 //Vibra Setting
 function VibraSwitch() {

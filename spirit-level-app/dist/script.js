@@ -464,31 +464,31 @@ async function switchMenu() {
 }
 
 async function startSpiritLevel() {
+  debugger;
   if (DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === "function") {
     const permissionState = await DeviceOrientationEvent.requestPermission();
     if (permissionState === "granted") {
       // do nothing special if granted
+      let notShow = document.querySelectorAll(".not-show");
+      let notRun = document.querySelectorAll(".not-running-ui");
+      notShow.forEach((element) => {
+        element.classList.remove("not-show");
+      });
+      notRun.forEach((element) => {
+        element.classList.add("not-show");
+      });
+
+      UpdateDataView();
     } else {
       let warnTXT = document.querySelector(".cltxt");
       warnTXT.innerHTML = "You have denied permission, so this app wont work. 😢<br><br>To give permission force-close your browser and try again.";
       supWarn.style.display = "inline";
+      let startButton = document.querySelectorAll(".button");
+      startButton.forEach((element) => {
+        element.classList.add("not-show");
+      });
     }
   }
-
-  //hide and show elements
-  //add .not-show and remove  .not-show class from elements
-  // .container and .not-running-ui
-
-  let notShow = document.querySelectorAll(".not-show");
-  let notRun = document.querySelectorAll(".not-running-ui");
-  notShow.forEach((element) => {
-    element.classList.remove("not-show");
-  });
-  notRun.forEach((element) => {
-    element.classList.add("not-show");
-  });
-
-  UpdateDataView();
 }
 
 //Vibra Setting

@@ -85,6 +85,11 @@ if (devorSup === false || isFF || isOP) {
 function setNoSup() {
   supWarn.style.display = "inline";
   dosup.innerHTML = redStop;
+
+  let startButton = document.querySelectorAll(".button");
+  startButton.forEach((element) => {
+    element.classList.add("not-show");
+  });
 }
 function setSup() {
   supWarn.style.display = "none";
@@ -480,6 +485,7 @@ async function startSpiritLevel() {
       UpdateDataView();
     } else {
       let warnTXT = document.querySelector(".cltxt");
+
       warnTXT.innerHTML = "You have denied permission, so this app wont work. 😢<br><br>To give permission force-close your browser and try again.";
       supWarn.style.display = "inline";
       let startButton = document.querySelectorAll(".button");

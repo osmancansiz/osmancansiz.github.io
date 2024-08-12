@@ -464,7 +464,6 @@ async function switchMenu() {
 }
 
 async function startSpiritLevel() {
-  debugger;
   if (DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === "function") {
     const permissionState = await DeviceOrientationEvent.requestPermission();
     if (permissionState === "granted") {

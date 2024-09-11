@@ -55,9 +55,11 @@ let devorSup = false;
 //check orientation support
 let dosup = document.getElementById("dosup");
 if (window.DeviceOrientationEvent) {
-  // Our browser supports DeviceOrientation
-  console.log("Yay");
-  devorSup = true;
+  if (!window.DeviceOrientationEvent.requestPermission) {
+    devorSup = false;
+  } else {
+    devorSup = true;
+  }
 } else {
   console.log("Sorry, your browser doesn't support Device Orientation");
   devorSup = false;

@@ -418,7 +418,7 @@ async function switchMenu() {
       // do nothing special if granted
     } else {
       let warnTXT = document.querySelector(".cltxt");
-      warnTXT.innerHTML = "You have denied permission, so this app wont work. 😢<br><br>To give permission force-close your browser and try again.";
+      warnTXT.innerHTML = "İzin vermediniz, bu yüzden uygulama çalışmayacak. <br><br>İzin vermek için tarayıcınızı zorla kapatın ve tekrar deneyin.";
       supWarn.style.display = "inline";
     }
   }
@@ -488,7 +488,7 @@ async function startSpiritLevel() {
     } else {
       let warnTXT = document.querySelector(".cltxt");
 
-      warnTXT.innerHTML = "You have denied permission, so this app wont work. 😢<br><br>To give permission force-close your browser and try again.";
+      warnTXT.innerHTML = "İzin vermediniz, bu yüzden uygulama çalışmayacak. <br><br>İzin vermek için tarayıcınızı zorla kapatın ve tekrar deneyin.";
       supWarn.style.display = "inline";
       let startButton = document.querySelectorAll(".button");
       startButton.forEach((element) => {

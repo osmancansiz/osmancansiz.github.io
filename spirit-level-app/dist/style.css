@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 :root {
   --bgcolor: #88b0ff;
   --blackcolor: #333;
@@ -5,7 +6,7 @@
   --greycolor: #999;
   --redcolor: #f1753a;
 
-  --fontfam: "Roboto Mono", monospace; /*"Anonymous Pro", monospace*/
+  --fontfam: "Outfit", sans-serif;
 }
 body {
   overflow: hidden;
@@ -513,14 +514,14 @@ a:visited {
   justify-content: center;
 }
 .title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--fontfam);
   font-size: 22px;
   font-weight: 600;
   text-align: center;
   color: #e94034;
 }
 .desc {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--fontfam);
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
